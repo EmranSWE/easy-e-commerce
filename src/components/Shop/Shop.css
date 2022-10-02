@@ -8,6 +8,18 @@ grid-template-columns: repeat(3,1fr);
 gap: 45px;
 margin: 100px;
 }
+
+.pageination{
+    display: block;
+}
+.pageination button{
+    margin-right: 10px;
+    background-color: white;
+}
+.pageination .selected{
+    background-color: orange;
+    color: white;
+}
 .cart-container{
    background-color:rgba(255, 153, 0, 0.3);
 }
