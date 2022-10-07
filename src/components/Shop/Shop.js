@@ -13,12 +13,12 @@ const Shop = () => {
     const [size,setSize]=useState(10);
 
     useEffect(()=>{
-        fetch(`https://warm-refuge-71079.herokuapp.com/product?page=${page}&size=${size}`)
+        fetch(`https://shrouded-retreat-25612.herokuapp.com/product?page=${page}&size=${size}`)
         .then(res =>res.json())
         .then(data => setProducts(data))
     },[page,size]);
 
-    fetch('https://warm-refuge-71079.herokuapp.com/productCount')
+    fetch('https://shrouded-retreat-25612.herokuapp.com/productCount')
     .then(res => res.json())
     .then(data => {
         const count = data.count;

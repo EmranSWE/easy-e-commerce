@@ -8,7 +8,7 @@ const useCart=() =>{
         const storedCart=getStoredCart();
         const savedCart = [];
         const keys=Object.keys(storedCart)
-        fetch('https://warm-refuge-71079.herokuapp.com/productByKeys',{
+        fetch('https://shrouded-retreat-25612.herokuapp.com/productByKeys',{
             method:"POST",
             headers:{
                 'content-type':'application/json'

@@ -17,10 +17,6 @@ const Shipment = () => {
     const handleNameBlur =event =>{
         setName(event.target.value)
     }
-
-    const handleEmailBlur= event =>{
-        setEmail(event.target.value)
-    }
     const handleAddressBlur= event =>{
         setAddress(event.target.value)
     }
