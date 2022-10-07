@@ -8,8 +8,7 @@ const useCart=() =>{
         const storedCart=getStoredCart();
         const savedCart = [];
         const keys=Object.keys(storedCart)
-        console.log(keys);
-        fetch('http://localhost:5000/productByKeys',{
+        fetch('https://warm-refuge-71079.herokuapp.com/productByKeys',{
             method:"POST",
             headers:{
                 'content-type':'application/json'
@@ -18,7 +17,6 @@ const useCart=() =>{
         })
         .then(res => res.json())
         .then(products =>{
-            console.log(products);
              for (const id in storedCart){
             const addedProduct=products.find(product =>product._id===id);
             if(addedProduct){

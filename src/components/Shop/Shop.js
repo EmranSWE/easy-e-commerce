@@ -13,12 +13,12 @@ const Shop = () => {
     const [size,setSize]=useState(10);
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/product?page=${page}&size=${size}`)
+        fetch(`https://warm-refuge-71079.herokuapp.com/product?page=${page}&size=${size}`)
         .then(res =>res.json())
         .then(data => setProducts(data))
     },[page,size]);
 
-    fetch('http://localhost:5000/productCount')
+    fetch('https://warm-refuge-71079.herokuapp.com/productCount')
     .then(res => res.json())
     .then(data => {
         const count = data.count;
@@ -27,7 +27,6 @@ const Shop = () => {
     })
     
     const handleAddToCart =(selectedProduct)=>{
-        console.log(selectedProduct);
         let newCart=[];
         const exists=cart.find(product=> product._id===selectedProduct._id);
         if(!exists){
