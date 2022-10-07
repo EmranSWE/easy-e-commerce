@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const Shipment = () => {
@@ -10,7 +11,8 @@ const Shipment = () => {
     const [address,setAddress]=useState('');
     const [phone,setPhone]=useState('');
     const [error,setError]=useState('');
-   
+   const navigate=useNavigate();
+
 
     const handleNameBlur =event =>{
         setName(event.target.value)
@@ -29,8 +31,8 @@ const Shipment = () => {
     const handleCreateUser = event =>{
         event.preventDefault();
         const shipping ={name,email,address,phone}
-        console.log(shipping)
-       
+        console.log(shipping);
+        navigate('/orders')
     }
 
     return (
