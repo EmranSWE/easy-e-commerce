@@ -3,3 +3,18 @@
     top: 0;
     padding: 0px 24px;
 }
+
+.upper{
+   background-color: rgb(69, 84, 184);
+   border: 0px;
+   border-radius: 5px;
+   font-size: 20px;
+   font-weight: bolder;
+   color: rgb(255, 255, 255);
+   
+   width: 100%;
+}
+
+.upper{
+    margin-top: 20px;
+}

@@ -8,7 +8,7 @@ const useCart=() =>{
         const storedCart=getStoredCart();
         const savedCart = [];
         const keys=Object.keys(storedCart)
-        fetch('https://shrouded-retreat-25612.herokuapp.com/productByKeys',{
+        fetch('https://peaceful-springs-08205.herokuapp.com/productByKeys',{
             method:"POST",
             headers:{
                 'content-type':'application/json'
